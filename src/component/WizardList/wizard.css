@@ -1,0 +1,21 @@
+.wizard-wrapper {
+  max-width: 50%;
+max-height: 60%;
+border-radius: 10px;
+}
+
+.slide-text {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  transform: translate(-50%, -30%);
+  text-align: center;
+  color: white;
+  font-size:10px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+ 
+}
+
+.slide-text h1 {
+  margin: 0.3rem 0;
+}
