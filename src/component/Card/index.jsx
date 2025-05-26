@@ -53,7 +53,7 @@ const CardList = () => {
             <div className='Aed'>
               <h3>{item.rating}</h3>
               <button onClick={() => onPress(item.id)}>Details</button>
-              <button>Add</button>
+              <button>Add button</button>
             </div>
           </li>
         ))}
