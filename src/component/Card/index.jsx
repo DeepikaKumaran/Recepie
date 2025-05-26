@@ -41,19 +41,20 @@ const CardList = () => {
 
 
   return (
-    <div className="card-wrapper">
+    <div className="card-wrapper" >
       <ul className="card-list">
         {images.map((item) => (
-          <li key={item.id} className="card">
+          <li key={item.id} className="card" onClick={() => onPress(item.id)}>
+            <div onClick={() => onPress(item.id)}></div>
             <img src={item.image} alt={item.description} />
             <h3>{item.name}</h3>
-            <p>{item.instructions[0]}.</p>
+            <p className='para'>{item.instructions[0]}.</p>
 
             <div className='line'></div>
             <div className='Aed'>
-              <h3>{item.rating}</h3>
-              <button onClick={() => onPress(item.id)}>Details</button>
-              <button>Add button</button>
+              <h3>AED 15.30</h3>
+              {/* <button onClick={() => onPress(item.id)}>Details</button> */}
+              <button>Add</button>
             </div>
           </li>
         ))}
