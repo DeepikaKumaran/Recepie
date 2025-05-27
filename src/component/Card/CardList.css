@@ -60,10 +60,13 @@ button{
 }
 
 .para{
-  height: 100px;
+  height:80px;
+  width: 100%;
 }
 h3{
-  font-size:13px;
+  font-size:15px;
+  margin-left: 10px;
 }
+
 
   

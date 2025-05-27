@@ -1,5 +1,23 @@
-.details .image1 img {
+.details{
+width: 50%;
+height: 70%;
+text-align: center;
+margin-top: 60px;  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+margin-left: 350px;
+
+
+
+}
+
+.details
+ .image1 img {
   width: 200px;
   height: 200px;
   align-items: center;
+
+  border-radius:50%
+}
+p{
+  padding: 15px;
 }

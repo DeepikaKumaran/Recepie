@@ -27,11 +27,11 @@ export const Description = () => {
 
     return (
         <div className="details">
+           < h1> Recepie Details</h1>
             <div className="image1"><img  src={details.image} alt={details.name} /></div>
-            
             <h1>{details.name}</h1>
-            <p>{details.instructions[0]}</p> 
-            <p>{details.rating}</p>
+            <p>{details.instructions}</p> 
+            <p>Meal Type:{details.mealType}</p>
         </div>
     );
 };
