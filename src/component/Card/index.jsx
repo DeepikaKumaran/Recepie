@@ -27,6 +27,8 @@ const CardList = () => {
   // .catch()
 
   //   }, []);
+
+  
   useEffect(() => {
     axios.get('https://dummyjson.com/recipes')
 
@@ -45,10 +47,10 @@ const CardList = () => {
       <ul className="card-list">
         {images.map((item) => (
           <li key={item.id} className="card" onClick={() => onPress(item.id)}>
-            <div onClick={() => onPress(item.id)}></div>
+            
             <img src={item.image} alt={item.description} />
-            <h3>{item.name}</h3>
-            <p className='para'>{item.instructions[0]}.</p>
+            <h3>{item.name .slice(0,22)}...</h3>
+            <p className='para'>{item.instructions[0].slice(0,50)}...</p>
 
             <div className='line'></div>
             <div className='Aed'>
