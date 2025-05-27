@@ -43,25 +43,33 @@ const CardList = () => {
 
 
   return (
-    <div className="card-wrapper" >
-      <ul className="card-list">
-        {images.map((item) => (
-          <li key={item.id} className="card" onClick={() => onPress(item.id)}>
-            
-            <img src={item.image} alt={item.description} />
-            <h3>{item.name .slice(0,22)}...</h3>
-            <p className='para'>{item.instructions[0].slice(0,50)}...</p>
+       
+  <div>
+  <h2>Choose Days & Meals</h2>
 
-            <div className='line'></div>
-            <div className='Aed'>
-              <h3>AED 15.30</h3>
-              {/* <button onClick={() => onPress(item.id)}>Details</button> */}
-              <button>Add</button>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+  <div className="card-list">
+    {images.map((item) => (
+      <div key={item.id} className="card" onClick={() => onPress(item.id)}>
+        <img src={item.image} alt={item.description} />
+
+        <h3>{item.name.slice(0, 22)}...</h3>
+
+        <div className="para">
+          <p>{item.instructions[0].slice(0, 70)}...</p>
+        </div>
+
+        <div className="line"></div>
+
+        <div className="price-section">
+          <h3>AED 15.30</h3>
+          <button className="add-button">ADD</button>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+   
   );
 };
 
