@@ -3,6 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import img1 from '../../Asset/img1.png';
 import img2 from '../../Asset/img2.png';
+import img4 from '../../Asset/img4.png';
 import './wizard.css';
 
 export const WizardNode = () => {
@@ -49,7 +50,6 @@ export const WizardNode = () => {
           <img src={img1} alt="Wizard 1" />
           <div className="slide-text">
             <h1>HealthyChoice, Product Days</h1>
-           
             <h1>Always!</h1>
           </div>
         </div>
@@ -59,6 +59,7 @@ export const WizardNode = () => {
             <h1 style={{backgroundColor:"green"}}>HealthyChoice , Product Days</h1>
             <h1 style={{backgroundColor:"green"}}>Always!</h1>
           </div>
+          
         </div>
       </Carousel>
 

@@ -14,7 +14,7 @@ import "./Calender.css"
 
     }
   return (
-    <div className="calen">
+    <div className="calender">
 <Calender onClickDay ={onClick}/>
 
     </div>

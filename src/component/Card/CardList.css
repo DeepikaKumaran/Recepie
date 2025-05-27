@@ -1,70 +1,79 @@
 
 .card-list {
-  
-  list-style: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
+  padding: 20px;
 }
 
-.card-list li {
-  background: white;
+.card {
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  padding: 5px;
-  width: 200px;
-  /* text-align: center; */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  cursor: pointer;
   transition: transform 0.2s;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.card-list li:hover {
+.card:hover {
   transform: translateY(-5px);
 }
-/* h3{
-  margin-top
-} */
-.card-list img {
+
+.card img {
   width: 100%;
-  height: 150px;
+  height: 180px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
-.Aed {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
+h2{
+  margin-left:12px;
 }
-button{
-  width: 50px;
-  height: 20px;
-  margin-top: 20px;
-  border: 1px solid maroon;
-  border-radius: 10px;
-  margin-top: 10px;
-  color:maroon;
-  font-weight: bold;
-  
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.para {
+  margin-top:-30px;
+  height: 45px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-left:-12px
 }
 
 .line {
-
-  border: 1px solid #9fa7a2;
-  width: 100%;
- 
-  
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 10px 0;
+  margin-top:40px;
 }
 
-.para{
-  height:80px;
-  width: 100%;
-}
-h3{
-  font-size:15px;
-  margin-left: 10px;
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.add-button {
+  padding: 6px 14px;
+  border: 1px solid #b30000;
+  color: #b30000;
+  background-color: #fff;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-  
+.add-button:hover {
+  background-color: #b30000;
+  color: white;
+}
