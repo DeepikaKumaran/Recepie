@@ -18,35 +18,3 @@ margin-left: 350px;
 p{
   padding: 15px;
 }
-.button-details {
-  background-color: green;
-  width: 100px;
-  height: 40px;
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 20px;
-  margin-left: auto;
-  
-}
-
-.button-details button {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: none;
-
-  color: white;
-  background-color: gray;
-  color:white;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-
-.button-details h1 {
-  font-size: 16px;
-  margin: 0;
-  color: white;
-}

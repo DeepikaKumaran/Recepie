@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import './description.css';
 
+
+
 export const Description = () => {
     const [details, setDetails] = useState(null);
-    const [count,setCount] =useState(0)
+   
     const location = useLocation();
     const { id } = location.state || {};
 
@@ -37,12 +39,8 @@ export const Description = () => {
             <div className="image1"><img  src={details.image} alt={details.name} /></div>
             <h1>{details.name}</h1>
             <p>{details.instructions}</p> 
-         <div className="button-details">
-            <button onClick={() =>setCount(count+1)}>+</button>
-            {<h1>{count}</h1>}
-        <button onClick={ ()=>setCount(count-1)}>-</button>
-
-         </div> 
+           
+         
         </div>
     );
 };

@@ -6,12 +6,13 @@ import { useState, useEffect } from 'react';
 import './CardList.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '../Button';
 
 
 const CardList = () => {
   const [images, setImages] = useState([]);
   const navigate = useNavigate();
-
+  const [count, setCount] = useState(0)
 
   //   useEffect(() => {
   //     // setImages([
@@ -28,7 +29,7 @@ const CardList = () => {
 
   //   }, []);
 
-  
+
   useEffect(() => {
     axios.get('https://dummyjson.com/recipes')
 
@@ -41,35 +42,52 @@ const CardList = () => {
     navigate('/description', { state: { id } });
   };
 
+   const onValueChange = (id) => {
+    
+  };
 
-  return (
-       
-  <div>
-  <h2>Choose Days & Meals</h2>
-
-  <div className="card-list">
-    {images.map((item) => (
-      <div key={item.id} className="card" onClick={() => onPress(item.id)}>
-        <img src={item.image} alt={item.description} />
-
-        <h3>{item.name.slice(0, 22)}...</h3>
-
-        <div className="para">
-          <p>{item.instructions[0].slice(0, 70)}...</p>
-        </div>
-
-        <div className="line"></div>
-
-        <div className="price-section">
-          <h3>AED 15.30</h3>
-          <button className="add-button">ADD</button>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
-
+  const onValue = (id) => {
    
+  };
+  return (
+
+    <div>
+      <h2>Choose Days & Meals</h2>
+
+      <div className="card-list">
+        {images.map((item) => (
+          <div key={item.id} className="card" >
+            <img src={item.image} alt={item.description} />
+
+            <h3>{item.name.slice(0, 22)}...</h3>
+
+            <div className="para">
+              <p>{item.instructions[0].slice(0, 70)}...</p>
+               {/* <div className="Detailss"onClick={ ()=>onPress(item.id)}>Details</div>  */}
+            </div>
+
+            <div className="line"></div>
+
+            <div className="price-section">
+              <h3>AED 15.30</h3>
+
+
+              {count === 0 ? (<button className="add-button" onClick={()=>onValueChange(item.id)} >ADD</button>) :
+
+        (<><button onClick={()=>onValueChange(item.id)}>+</button>
+            <h1>{count}</h1>
+        <button onClick={()=>onValue(item.id)}>-</button></>)}
+
+
+            </div>
+
+          </div>
+        ))}
+
+      </div>
+    </div>
+
+
   );
 };
 
