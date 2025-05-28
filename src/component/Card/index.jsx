@@ -54,9 +54,9 @@ const CardList = () => {
     <div>
       <h2>Choose Days & Meals</h2>
 
-      <div className="card-list">
+      <div className="card-list" >
         {images.map((item) => (
-          <div key={item.id} className="card" >
+          <div key={item.id} className="card"  onClick={ ()=>onPress(item.id)}>
             <img src={item.image} alt={item.description} />
 
             <h3>{item.name.slice(0, 22)}...</h3>
